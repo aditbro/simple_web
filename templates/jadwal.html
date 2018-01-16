@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UATM ITB</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
+    <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand navbar-right" href="#"><a href="#" class=""><img class="img-responsive" src="{{url_for('static', filename='img/logo.png')}}" height=30px width=100px alt="UATM Logo"></a></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Jadwal <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/peminjaman">Sewa</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top:80px">
+      <div class="row">
+        <form>
+          <div class="form-inline">
+            <label class="input" for="Tanggal">Tanggal</label> 
+            <input class="form-control input" type="text" name="tanggal" id="tanggal" aria-describedby="TanggalHelp" placeholder="{{date}}" onfocus="(this.type='date')">
+            <button class="btn input" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="row" style="margin-top:20px;">
+        <div class="col-md-6">
+          <h5 class="text-center" style="padding-top:20px"><strong>Selasar A</strong></h5>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Jam</th>
+                <th scope="col">Pemakai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">06.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">07.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">08.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">09.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">10.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">11.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">12.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">13.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">14.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">15.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">16.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">17.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">18.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">19.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">20.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">21.00</th>
+                <td>Larry</td>
+              </tr>
+            </tbody>
+          </table>   
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-center" style="padding-top:20px"><strong>Selasar B</strong></h5>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Jam</th>
+                <th scope="col">Pemakai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">06.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">07.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">08.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">09.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">10.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">11.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">12.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">13.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">14.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">15.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">16.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">17.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">18.00</th>
+                <td>Mark</td>
+              </tr>
+              <tr>
+                <th scope="row">19.00</th>
+                <td>Jacob</td>
+              </tr>
+              <tr>
+                <th scope="row">20.00</th>
+                <td>Larry</td>
+              </tr>
+              <tr>
+                <th scope="row">21.00</th>
+                <td>Larry</td>
+              </tr>
+            </tbody>
+          </table> 
+        </div>
+      </div>
+      <div class="row" style="background-color: rgb(10,10,10,0.5); color:white; margin-top:40px">
+        <h4>Disclaimer</h4>
+        <p>UATM akan tetap memperbarui jadwal yang ada pada halaman ini seakurat mungkin, namun jadwal yang tertera pada website ini adalah bentuk perjanjian antara penyewa dan UATM. Jadwal ini tidak mengikat pihak lainnya, apabila lapangan tidak tersedia dikarenakan digunakan pihak lain selain UATM, maka UATM tidak bertanggung jawab atas ketidaktersediaan lapangan tersebut.
+      </div>
+    </div>
+  </body>
+</html>

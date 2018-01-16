@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1> Form Peminjaman </h1>
+
+<form action="{{url_for('daftar')}}" method ='POST'>
+
+<p>nama</p><input type='text' size='30' name='name' placeholder='Nama Peminjam'>
+<p>nim</p><input type='text' size='30' name='nim' placeholder='NIM'>
+<p>Lapangan</p>
+<input type="radio" name="Lapangan" value="A" checked>A<br>
+<input type="radio" name="Lapangan" value="B">B<br>
+<p>waktu</p>
+<input name="date" type="date">
+<input name="time" type="time">
+<p>Lama Peminjaman</p>
+<input name="durasi" type='text'>
+<p>tambahan</p><input type='text' size='30' name='Tambahan' placeholder='tambahan'>
+</br>
+</br>
+<input type='submit' value='Submit'>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UATM ITB</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
+    <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand navbar-right" href="#"><a href="#" class=""><img class="img-responsive" src="{{url_for('static', filename='img/logo.png')}}" height=30px width=100px alt="UATM Logo"></a></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Jadwal</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/peminjaman">Sewa<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="margin-top:80px; background-color: rgb(255,255,255,0.6);">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 style="text-align:center; padding-top:20px"><strong>Form Peminjaman Alat-alat UATM</strong></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form>
+            <div class="form-group">
+              <label for="InputNama" style="color:black;">Nama Peminjam</label>
+              <input type="text" name="nama" class="form-control" id="InputNama" placeholder="Masukkan nama peminjam">
+              <div class="form-row">
+                <div class="col-md-4">
+                  <label for="InputNIM" style="color:black; margin-top:20px;">NIM Peminjam</label>
+                  <input type="number" name="nim" class="form-control" id="InputNIM" placeholder="Masukkan NIM peminjam">
+                </div>
+              </div>
+              <label for="InputLapangan" style="color:black; margin-top:20px;">Pilih Lapangan</label>
+              <div class="form-check" id="InputLapangan">
+                <input class="form-check-input" type="radio" name="lapangan" id="radio1" value="A" checked>
+                <label class="form-check-label" for="radio1" style="color:black;">
+                  A
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="lapangan" id="radio2" value="B">
+                <label class="form-check-label" for="radio2" style="color:black;">
+                  B
+                </label>
+              </div>
+              <label for="InputWaktu" style="color:black; margin-top:20px;">Waktu Peminjaman</label>
+              <div class="form-row">
+                <div class="col-md-4">
+                  <input type="date" name="tanggal" class="form-control" id="InputWaktu">
+                </div>
+                <div class="col-md-4">
+                  <input class="form-control" type="time" name="mulai" id="InputMulai">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-4">
+                  <label for="InputLine" style="color:black; margin-top:20px">ID Line</label>
+                  <input type="text" class="form-control" name="line" id="InputLine" placeholder="Masukan ID Line">
+                </div>
+              </div>
+              <label for="InputBarang" style="color:black; margin-top:20px">Daftar Peminjaman Barang</label>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="meja" style="color:black;">Meja @10.000/jam</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="JumlahMeja" id="jumlahMeja" class="form-control" value="0">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaMeja" name="hargaMeja" class="form-control" readonly="readonly" value="Rp 0"> 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="net" style="color:black;">Net @5.000/jam</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="JumlahNet" id="jumlahNet" class="form-control" value="0">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaNet" name="hargaNet" class="form-control" readonly value="Rp 0"> 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="bet" style="color:black;">Bet @3.000/jam</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="JumlahBet" id="jumlahBet" class="form-control" value="0">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaBet" name="hargaBet" class="form-control" value="Rp 0" readonly> 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="bola1" style="color:black;">Bola bintang 1 @1.000/jam</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="JumlahBola1" id="jumlahBola1" class="form-control" value="0">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaBola1" name="hargaBola1" value="Rp 0" class="form-control" readonly> 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="bola3" style="color:black;">Bola bintang 3 @3.000/jam</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="JumlahBola3" id="jumlahBola3" class="form-control" value="0">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaBola3" value="Rp 0" name="hargaBola3" class="form-control" readonly> 
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="lama" style="color:black;">lama peminjaman (dalam jam)</label>
+                </div>
+                <div class="form-group col-md-2">
+                  <input type="number" name="lama" id="lama" class="form-control" value="0">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-3">
+                  <label class="form-check-label" for="meja" style="color:black;">Total</label>
+                </div>
+                <div class="form-group col-md-2">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" id="hargaTotal" name="hargaTotal" class="form-control" readonly value="Rp 0"> 
+                </div>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1" style="color:black;">
+                  Saya menyetujui <a href="#">peraturan peminjaman</a> alat alat UATM.
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top:20px">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

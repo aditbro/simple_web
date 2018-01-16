@@ -1,0 +1,41 @@
+label {
+  color: white;
+}
+
+small {
+  color: white;
+}
+
+p {
+  margin:5px;
+}
+
+.col-md-6 {
+  background-color: rgb(255, 255, 255, 0.5) ;
+}
+
+.genap {
+  background-color: rgb(40, 44, 51, 0.8) ;
+  color: black; 
+}
+
+.ganjil {
+  background-color: rgb(255, 242, 0, 0.8);
+  color: black;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+
+.input {
+  margin:5px;
+  border-radius:10px;
+}
